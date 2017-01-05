@@ -16,6 +16,7 @@ function ensureLoggedIn (nextState, replace, done) {
 
 import Login from './Login';
 import Home from './Home';
+import NewList from './NewList';
 
 import auth from './auth';
 
@@ -35,6 +36,7 @@ ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" onEnter={ensureLoggedIn} component={Home} />
     <Route path="login" component={Login} />
+    <Route path="lists/new" component={NewList} />
   </Router> ,
   document.getElementById('root')
 );
